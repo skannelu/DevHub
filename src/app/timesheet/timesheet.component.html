@@ -21,10 +21,10 @@
   </p-tabPanel>
 </p-tabView>
 
-<button pButton label="Add Time Entry" (click)="displayEditDialog = true"></button>
+<button pButton label="Add Time Record" (click)="displayEditDialog = true"></button>
 
 
-<p-dialog header="Create Time" [modal]="true" [(visible)]="displayEditDialog" [ngSwitch]="dialogPageIndex" width="700"
+<p-dialog header="Add Time" [modal]="true" [(visible)]="displayEditDialog" [ngSwitch]="dialogPageIndex" width="700"
           height="550">
 
   <div class="dialogBody">
@@ -47,18 +47,18 @@
               [(selection)]="selectedProject"></p-tree>
 
     </div>
-    <div *ngSwitchCase="PageNames.PlacePage">
+    <div *ngSwitchCase="PageNames.LocationPage">
 
       <p-gmap [options]="mapOptions" [overlays]="mapOverlays" styleClass="gmap"
               (onOverlayClick)="onMarkerClick($event)"></p-gmap>
 
     </div>
-    <div *ngSwitchCase="PageNames.PeoplePage">
+    <div *ngSwitchCase="PageNames.DeveloperPage">
 
       <p-dataGrid [value]="people" [paginator]="true" [rows]="4">
         <ng-template let-person pTemplate="item">
           <p-panel header="{{person.firstName}} {{person.lastName}}" class="ui-g-12 ui-md-3">
-            <img [src]="person.avatar" [pTooltip]="person.email" tooltipPosition="bottom"/>
+            <img [src]="person.avatar" [pTooltip]="person.email" tooltipPosition="left"/>
           </p-panel>
         </ng-template>
       </p-dataGrid>
@@ -78,8 +78,8 @@
 <p-confirmDialog icon="fa fa-question-circle" width="425" [visible]="false" #confirmDialog>
 
   <p-footer>
-    <button type="button" pButton icon="fa-close" label="No, go back" (click)="confirmDialog.reject()"></button>
-    <button type="button" pButton icon="fa-check" label="Yes, lose changes"
+    <button type="button" pButton icon="fa-close" label="No" (click)="confirmDialog.reject()"></button>
+    <button type="button" pButton icon="fa-check" label="Yes, undo changes"
             (click)="confirmDialog.accept() && confirmDialog.hide()"></button>
   </p-footer>
 

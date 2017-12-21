@@ -15,15 +15,11 @@ export class ProjectsComponent implements OnInit {
 
   allDevs = [
 
-    { label: 'Jill', value: 'Jill Cool' },
-    { label: 'Joe', value: 'Joe Cool' },
-    { label: 'Mary', value: 'Mary Cool' },
-    { label: 'Susan', value: 'Susan Jones' },
-    { label: 'Phil', value: 'Phil Stephens' },
-    { label: 'Karen', value: 'Karen Phillips' },
-    { label: 'Chris', value: 'Chris Hampton' },
-    { label: 'Si', value: 'Si Chew' },
-    { label: 'Terri', value: 'Terri Smith' }
+    { label: 'Sravani', value: 'Sravani Kannelur' },
+    { label: 'Bhanu', value: 'Bhanu Khanna' },
+    { label: 'Keeru', value: 'Keeru Reddy' },
+    { label: 'Ashika', value: 'Ashika Goel' },
+    { label: 'Harika', value: 'Harika Kapoor' },
 
   ]
 
@@ -33,11 +29,12 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.projectForm = this.fb.group({
       projectId: ['', [Validators.required, Validators.minLength(5)]],
-      description: ['My cool project', [Validators.required, Validators.maxLength(140)]],
+      projectName: ['',[Validators.required, Validators.minLength(5)]],  
+      description: ['This project is about', [Validators.required, Validators.maxLength(40)]],
       startDate: [new Date(), Validators.required],
-      projectType: ['B'],
+      projectType: ['O'],
       selectedDevs: [[]],
-      rating: [3]
+      rating: [4]
     })
 
   }
@@ -48,6 +45,7 @@ export class ProjectsComponent implements OnInit {
 
   onSubmit() {
     alert(JSON.stringify(this.projectForm.value));
+    
   }
 
 

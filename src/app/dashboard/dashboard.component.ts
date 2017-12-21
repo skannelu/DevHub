@@ -2,8 +2,9 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { UIChart } from "primeng/primeng";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval';
+import { CLIENT_RENEG_LIMIT } from 'tls';
 
-const DEFAULT_COLORS = ['#3366CC', '#DC3912', '#FF9900', '#109618', '#990099',
+const DEFAULT_COLORS = ['#00008B', '#DC143C', '#228B22', '#FFD700', '#990099',
   '#3B3EAC', '#0099C6', '#DD4477', '#66AA00', '#B82E2E',
   '#316395', '#994499', '#22AA99', '#AAAA11', '#6633CC',
   '#E67300', '#8B0707', '#329262', '#5574A6', '#3B3EAC']
@@ -19,15 +20,16 @@ export class DashboardComponent implements AfterViewInit {
   @ViewChild("mixedChart") mixedChart: UIChart;
 
   hoursByProject = [
-    { id: 1, name: 'Payroll App', hoursSpent: 8 },
-    { id: 2, name: 'Agile Times App', hoursSpent: 16 },
-    { id: 3, name: 'Point of Sale App', hoursSpent: 24 },
+    { id: 1, name: 'AdhocSportz App', hoursSpent: 9 },
+    { id: 2, name: 'SWIFT App', hoursSpent: 27 },
+    { id: 3, name: 'Yumster App', hoursSpent: 45 },
+    { id: 4, name: 'Book-A-Vintage App', hoursSpent: 63 }
   ]
 
   chartOptions = {
     title: {
       display: true,
-      text: 'Hours By Project'
+      
     },
     legend: {
       position: 'bottom'
@@ -66,39 +68,22 @@ export class DashboardComponent implements AfterViewInit {
   }
 
 
-  hoursByTeamChartData = {
-
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [
-      {
-        label: 'Dev Team',
-        backgroundColor: DEFAULT_COLORS[0],
-        data: [65, 59, 80, 55, 67, 73]
-      },
-      {
-        label: 'Ops Team',
-        backgroundColor: DEFAULT_COLORS[1],
-        data: [44, 63, 57, 90, 77, 70]
-      }
-    ]
-
-  }
 
   hoursByTeamChartDataMixed = {
 
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug','Sept','Oct','Nov','Dec'],
     datasets: [
       {
-        label: 'Dev Team',
+        label: 'Developer Team',
         type: 'bar',
         backgroundColor: DEFAULT_COLORS[0],
-        data: [65, 59, 80, 55, 67, 73]
+        data: [60, 54, 75, 50, 62, 68, 76, 34, 56, 23, 12, 44]
       },
       {
-        label: 'Ops Team',
-        type: 'line',
+        label: 'Cyber Team',
+        type: 'bar',
         backgroundColor: DEFAULT_COLORS[1],
-        data: [44, 63, 57, 90, 77, 70]
+        data: [39, 58, 52, 85, 72, 65, 67, 43, 65, 32, 21, 83]
       }
     ]
 
@@ -112,14 +97,10 @@ export class DashboardComponent implements AfterViewInit {
     let labelClicked = this.hoursByTeamChartDataMixed.datasets[dataSetIndex].label;
     let valueClicked = this.hoursByTeamChartDataMixed.datasets[dataSetIndex].data[dataItemIndex];
 
-    alert(`Looks like ${labelClicked} worked ${valueClicked} hours`);
+    alert(` The ${labelClicked} worked ${valueClicked} hours`);
   }
 
 
   ngAfterViewInit() {
-
-  }
-
-
-
-}
+} 
+} 

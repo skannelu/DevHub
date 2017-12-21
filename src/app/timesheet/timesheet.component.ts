@@ -8,10 +8,10 @@ declare var moment: any;
 declare var google: any;
 
 export enum PageNames {
-  TimePage,
   ProjectPage,
-  PlacePage,
-  PeoplePage
+  LocationPage,
+  DeveloperPage,
+  TimePage,
 }
 
 
@@ -24,11 +24,11 @@ export class TimesheetComponent {
 
   private userTimeData = [
 
-    { day: "Monday", startTime: '9:00', endTime: '17:00', project: 'Agile Times', category: "Frontend" },
-    { day: "Tuesday", startTime: '9:00', endTime: '17:00', project: 'Payroll App', category: "Backend" },
-    { day: "Wednesday", startTime: '9:00', endTime: '17:00', project: 'Point of Sale App', category: "Operations" },
-    { day: "Thursday", startTime: '9:00', endTime: '17:00', project: 'Mobile App', category: "Planning" },
-    { day: "Friday", startTime: '9:00', endTime: '17:00', project: 'Agile Times', category: "Requirements" },
+    { day: "Monday", startTime: '9:00', endTime: '17:00', project: 'AdhocSportz App', category: "Frontend" },
+    { day: "Tuesday", startTime: '9:00', endTime: '17:00', project: 'SWIFT App', category: "Backend" },
+    { day: "Wednesday", startTime: '9:00', endTime: '17:00', project: 'Yumster App', category: "Operations" },
+    { day: "Thursday", startTime: '9:00', endTime: '17:00', project: 'SWIFT App', category: "Planning" },
+    { day: "Friday", startTime: '9:00', endTime: '17:00', project: 'AdhocSportz App', category: "Requirements" },
 
   ]
 
@@ -40,13 +40,13 @@ export class TimesheetComponent {
 
   PageNames = PageNames;
 
-  dialogPageIndex = PageNames.TimePage;
+  dialogPageIndex = PageNames.ProjectPage;
 
   dialogPages: MenuItem[] = [
-    { label: "Time" },
     { label: "Project" },
-    { label: "Place" },
-    { label: "People" }
+    { label: "Location" },
+    { label: "Developer" },
+    { label: "Time" }
   ];
 
   private headerConfig = {
@@ -69,15 +69,13 @@ export class TimesheetComponent {
 
   private mapOptions = {
 
-    center: { lat: -33.8688, lng: 151.2093 },
-    zoom: 5
+    center: { lat: 35.2271, lng: -80.8431 },
+    zoom: 6
   };
 
   private mapOverlays = [
-    new google.maps.Marker({ position: { lat: -35.3075, lng: 149.124417 }, title: "Canberra Office" }),
-    new google.maps.Marker({ position: { lat: -33.8688, lng: 151.2093 }, title: "Sydney Office" }),
-    new google.maps.Marker({ position: { lat: -37.813611, lng: 144.963056 }, title: "Melbourne Office" }),
-    new google.maps.Marker({ position: { lat: -28.016667, lng: 153.4 }, title: "Gold Coast Office" })
+    new google.maps.Marker({ position: { lat: 35.78, lng: -78.64 }, title: "Raleigh Office" }),
+    new google.maps.Marker({ position: { lat: 35.2271, lng: -80.8431 }, title: "Charlotte Office" }),
   ];
 
   people = SamplePeopleData.people;
@@ -108,7 +106,7 @@ export class TimesheetComponent {
 
     this.confirmationService.confirm({
       header: 'Cancel Time Creation',
-      message: 'Cancel all changes. Are you sure?',
+      message: 'Do you want to cancel the changes?',
       accept: () => {
         this.displayEditDialog = false;
         this.messages.push({ severity: 'info', summary: 'Edits Cancelled', detail: 'No changes were saved' });

@@ -18,7 +18,7 @@ export class AlltimesComponent implements OnInit {
 
   allTimesheetData = [];
 
-  allProjectNames = ['', 'Payroll App', 'Mobile App', 'Agile Times'];
+  allProjectNames = ['', 'AdhocSportz App', 'SWIFT App', 'Yumster App'];
 
   allProjects = this.allProjectNames.map((proj) => {
     return { label: proj, value: proj }

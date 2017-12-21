@@ -8,7 +8,7 @@ export class SampleProjectsData {
       "collapsedIcon": "fa-folder",
       "selectable": false,
       "children": [{
-        "label": "Agile Times",
+        "label": "Adhoc Sportz",
         "selectable": false,
         "data": "agile",
         "expandedIcon": "fa-folder-open",
@@ -20,7 +20,7 @@ export class SampleProjectsData {
         ]
       },
         {
-          "label": "Mobile App",
+          "label": "SWIFT App",
           "data": "mobile",
           "expandedIcon": "fa-folder-open",
           "collapsedIcon": "fa-folder",
@@ -30,7 +30,32 @@ export class SampleProjectsData {
             {"label": "Backend", "icon": "fa-cloud", "data": "be"},
             {"label": "Operations", "icon": "fa-cogs", "data": "ops"}
           ]
-        }]
+        },
+      {
+        "label": "Yumster App",
+          "data": "agile",
+          "expandedIcon": "fa-folder-open",
+          "collapsedIcon": "fa-folder",
+          "selectable": false,
+          "children": [
+            {"label": "Frontend", "icon": "fa-chrome", "data": "fe"},
+            {"label": "Backend", "icon": "fa-cloud", "data": "be"},
+            {"label": "Operations", "icon": "fa-cogs", "data": "ops"}
+          ]
+      },
+      {
+        "label": "Book-A-Vintage App",
+        "data": "mobile",
+        "expandedIcon": "fa-folder-open",
+        "collapsedIcon": "fa-folder",
+        "selectable": false,
+        "children": [
+          {"label": "Frontend", "icon": "fa-chrome", "data": "fe"},
+          {"label": "Backend", "icon": "fa-cloud", "data": "be"},
+          {"label": "Operations", "icon": "fa-cogs", "data": "ops"}
+        ]
+      }
+      ]
 
 
     }

@@ -1,9 +1,9 @@
 export class SamplePeopleData {
 
   public static people =
-    [{"id":1,"firstName":"Dennis","lastName":"Vasquez","email":"dvasquez0@mediafire.com","avatar":"http://i.pravatar.cc/100?u=Dennis"},
-      {"id":2,"firstName":"Antonio","lastName":"Payne","email":"apayne1@studiopress.com","avatar":"http://i.pravatar.cc/100?u=Antonio"},
-      {"id":3,"firstName":"Tina","lastName":"Torres","email":"ttorres2@goo.ne.jp","avatar":"http://i.pravatar.cc/100?u=Tina"},
+    [{"id":1,"firstName":"Sravani","lastName":"Kannelur","email":"sravanik424@gmail.com","avatar":"http://i.pravatar.cc/100?u=Dennis"},
+      {"id":2,"firstName":"Bhanu","lastName":"Khanna","email":"bkhanna@gmail.com","avatar":"http://i.pravatar.cc/100?u=Antonio"},
+      {"id":3,"firstName":"Keeru","lastName":"Reddy","email":"kreddy@gmail.com","avatar":"http://i.pravatar.cc/100?u=Tina"},
       {"id":4,"firstName":"Anne","lastName":"Jordan","email":"ajordan3@nhs.uk","avatar":"http://i.pravatar.cc/100?u=Anne"},
       {"id":5,"firstName":"Ann","lastName":"Scott","email":"ascott4@vk.com","avatar":"http://i.pravatar.cc/100?u=Ann"},
       {"id":6,"firstName":"Stephen","lastName":"Rivera","email":"srivera5@spiegel.de","avatar":"http://i.pravatar.cc/100?u=Stephen"},

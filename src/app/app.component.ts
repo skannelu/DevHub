@@ -10,6 +10,7 @@ declare var jQuery :any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent implements OnInit, AfterViewInit {
 
   menuItems: MenuItem[];
@@ -34,13 +35,12 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     this.menuItems = [
-      {label: 'Dashboard', icon: 'fa-home', routerLink: ['/dashboard'], command: (event) => handleSelected(event)},
-      {label: 'All Times', icon: 'fa-calendar', routerLink: ['/alltimes'], command: (event) => handleSelected(event)},
-      {label: 'My Timesheet', icon: 'fa-clock-o', routerLink: ['/timesheet'], command: (event) => handleSelected(event)},
-      {label: 'Add Project', icon: 'fa-tasks', routerLink: ['/projects'], command: (event) => handleSelected(event)},
-      {label: 'My Profile', icon: 'fa-users', routerLink: ['/profile'], command: (event) => handleSelected(event)},
-      {label: 'Settings', icon: 'fa-sliders', routerLink: ['/settings'], command: (event) => handleSelected(event)},
-      {label: 'NestCam', icon: 'fa-video-camera', routerLink: ['/nestcam'], command: (event) => handleSelected(event)}
+      {label: 'Dashboard', icon: 'fa-bar-chart', routerLink: ['/dashboard'], command: (event) => handleSelected(event)},
+      {label: 'All Shifts', icon: 'fa-clock-o', routerLink: ['/alltimes'], command: (event) => handleSelected(event)},
+      {label: 'My Schedule', icon: 'fa-calendar-times-o', routerLink: ['/timesheet'], command: (event) => handleSelected(event)},
+      {label: 'Add Project', icon: 'fa-plus', routerLink: ['/projects'], command: (event) => handleSelected(event)},
+      {label: 'Profile', icon: 'fa-user-circle-o', routerLink: ['/profile'], command: (event) => handleSelected(event)}
+   
     ]
 
     this.miniMenuItems = [];
@@ -67,3 +67,4 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
 }
+

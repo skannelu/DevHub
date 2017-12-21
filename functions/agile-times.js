@@ -109,7 +109,7 @@ function createNewTimeSheet(projectName, categoryName) {
         date: new Date()
     };
 
-    var client = require('graphql-client')({ url: 'https://api.graph.cool/simple/v1/cj7wkkx1h0hm70145q6pn99i9' });
+    var client = require('graphql-client')({ url: 'https://api.graph.cool/simple/v1/cjb71sr4112520179t3dm1h91' });
 
     client.query(`
         mutation createTimesheet ($user: String!, $project: String!, $category: String!, $startTime: Int!, $endTime: Int!, $date: DateTime!) {
