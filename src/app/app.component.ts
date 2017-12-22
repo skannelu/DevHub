@@ -39,7 +39,9 @@ export class AppComponent implements OnInit, AfterViewInit {
       {label: 'All Shifts', icon: 'fa-clock-o', routerLink: ['/alltimes'], command: (event) => handleSelected(event)},
       {label: 'My Schedule', icon: 'fa-calendar-times-o', routerLink: ['/timesheet'], command: (event) => handleSelected(event)},
       {label: 'Add Project', icon: 'fa-plus', routerLink: ['/projects'], command: (event) => handleSelected(event)},
-      {label: 'Profile', icon: 'fa-user-circle-o', routerLink: ['/profile'], command: (event) => handleSelected(event)}
+      {label: 'Profile', icon: 'fa-user-circle-o', routerLink: ['/profile'], command: (event) => handleSelected(event)},
+      {label: 'People', icon: 'fa-users', routerLink: ['/people'], command: (event) => handleSelected(event)}
+
    
     ]
 
