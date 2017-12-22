@@ -1,20 +1,33 @@
 
-import { People } from 'app/providers/people';
+import { People } from '../providers/people';
 import { Component, OnInit } from '@angular/core';
 import {DataTable, Listbox } from 'primeng/primeng';
 @Component({
-  selector: 'in-memory-data',
-  //templateUrl: '/InMemoryDataService.html',
-  template:`<div>
-  <h1> Parsed JSON data</h1>
-  <div *ngFor='let data of people'>
-    <ul>
-     <li> <b>ID:</b> {{data.id}} ,<br> <b>First Name:</b> {{data.firstName}},<br> <b>Last Name:</b> {{data.lastName}},<br> <b>Email:</b> {{data.email}},<br> <b>Avatar:</b> {{data.avatar}} <br></li>
-    </ul>
-  </div></div>`,
+  selector: 'at-InMemory',
+  //templateUrl: './InMemory.component.html',
+  //styleUrls: ['./InMemory.component.css'],
+  template:`
+  <style>
+  h2 {
+    font-weight: bolder;
+    font-size: large;
+    display: inline;
+    margin: 1em;
+  }
+  </style>
+  <div class="header ui-g-12">
+      <h2>Parsed JSON Data</h2>
+      <table>
+     <div *ngFor='let data of people'>
+       <ul>
+       <li> <b>ID:</b> {{data.id}} <br> <b>First Name:</b> {{data.firstName}} <br> <b>Last Name:</b> {{data.lastName}} <br> <b>Email:</b> {{data.email}}<br> <b>Avatar:</b> {{data.avatar}} <br></li>
+       </ul>
+      </div>
+      </table>
+  </div>`,
 })
 //let ppListJ:Array<People> = this.InMemoryDataService();
-export class InMemoryDataService {
+export class InMemoryComponent {
   
   //createDb() {}
   people: any[] =[

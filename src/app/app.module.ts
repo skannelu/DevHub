@@ -25,6 +25,8 @@ import { StatisticComponent } from './statistic/statistic.component';
 import { TimesheetComponent } from './timesheet/timesheet.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProfileComponent } from './profile/profile.component';
+
+
 //import {PeopleComponent} from './people/people.component';
 
 
@@ -37,7 +39,7 @@ import { AlwaysAuthGuard } from './providers/AlwaysAuthGuard';
 import { UserService } from './providers/UserService';
 import { OnlyLoggedInUsersGuard } from './providers/OnlyLoggedInUsersGuard';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryComponent }  from './InMemory/InMemory.component';
 //import { MessageService } from './providers/message.service';
 //import { HttpService } from './providers/http.service';
 
@@ -49,8 +51,7 @@ const appRoutes: Routes = [
   { path: 'alltimes', component: AlltimesComponent },
   { path: 'timesheet', component: TimesheetComponent },
   { path: 'projects', component: ProjectsComponent },
-//  { path: 'people', component: PeopleComponent },
-  { path: 'people', component: InMemoryDataService },
+  { path: 'people', component: InMemoryComponent },
   { path: 'profile', component: ProfileComponent,canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard], }
 
 ];
@@ -65,8 +66,8 @@ const appRoutes: Routes = [
     AlltimesComponent,
     ProfileComponent,
     FielderrorsComponent,
-    //PeopleComponent,
-    InMemoryDataService,
+    InMemoryComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -116,8 +117,6 @@ const appRoutes: Routes = [
     AlwaysAuthGuard, 
     UserService,
     OnlyLoggedInUsersGuard,
-    //HttpService,
-    //MessageService,
   ],
   bootstrap: [AppComponent]
 })
