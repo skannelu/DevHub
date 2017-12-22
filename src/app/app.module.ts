@@ -52,7 +52,7 @@ const appRoutes: Routes = [
   { path: 'timesheet', component: TimesheetComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'people', component: InMemoryComponent },
-  { path: 'profile', component: ProfileComponent,canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard], }
+  { path: 'profile', component: ProfileComponent}//,canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard], 
 
 ];
 

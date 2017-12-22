@@ -12,12 +12,23 @@
                 <at-fielderrors [form]="projectForm" field="projectId" nicename="Project ID"> </at-fielderrors>
            </div>
         </div>    
+
+        
         <div class="ui-g">
             <label for="projectName" class="ui-g-12 ui-md-2">Project Name*</label>
             <input pInputText id="projectName" formControlName="projectName" placeholder="Enter Project Name" class="ui-g-12 ui-md-5"/>
             <div class="ui-g-12 ui-md-5">
 
                     <at-fielderrors [form]="projectForm" field="projectName" nicename="Project Name"> </at-fielderrors>
+            </div>
+                     
+        </div>
+
+        <div class="ui-g">
+            <label for="projectEmail" class="ui-g-12 ui-md-2">Project Email</label>
+            <input pInputText id="projectEmail" formControlName="projectEmail" placeholder="Enter Project Email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="ui-g-12 ui-md-5"/>
+            <div class="ui-g-12 ui-md-5">
+                <at-fielderrors [form]="projectForm" field="projectEmail" nicename="Project Email"> </at-fielderrors>
             </div>
                      
         </div>
