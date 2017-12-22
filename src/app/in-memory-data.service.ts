@@ -518,7 +518,7 @@ export class InMemoryDataService {
       {"id":498,"firstName":"Walter","lastName":"Meyer","email":"wmeyerdt@latimes.com","avatar":"http://i.pravatar.cc/100?u=Walter"},
       {"id":499,"firstName":"James","lastName":"Long","email":"jlongdu@usnews.com","avatar":"http://i.pravatar.cc/100?u=James"},
       {"id":500,"firstName":"Sara","lastName":"Vasquez","email":"svasquezdv@sina.com.cn","avatar":"http://i.pravatar.cc/100?u=Sara"}
-    ];
+  ];
     //ppList:Array<People>  = [];
     //ppDictL = this.people;
     //p:any = '';
