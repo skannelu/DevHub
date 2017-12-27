@@ -39,7 +39,8 @@ import { AlwaysAuthGuard } from './providers/AlwaysAuthGuard';
 import { UserService } from './providers/UserService';
 import { OnlyLoggedInUsersGuard } from './providers/OnlyLoggedInUsersGuard';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryComponent }  from './InMemory/InMemory.component';
+import {DataService} from './services/data.service';
+import { UserComponent } from './components/user/user.component';
 //import { MessageService } from './providers/message.service';
 //import { HttpService } from './providers/http.service';
 
@@ -51,8 +52,8 @@ const appRoutes: Routes = [
   { path: 'alltimes', component: AlltimesComponent },
   { path: 'timesheet', component: TimesheetComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'people', component: InMemoryComponent },
-  { path: 'profile', component: ProfileComponent}//,canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard], 
+  { path: 'profile', component: ProfileComponent},//,canActivate: [OnlyLoggedInUsersGuard, AlwaysAuthGuard], 
+  { path: 'users', component: UserComponent}
 
 ];
 
@@ -66,7 +67,7 @@ const appRoutes: Routes = [
     AlltimesComponent,
     ProfileComponent,
     FielderrorsComponent,
-    InMemoryComponent,
+    UserComponent,
 
   ],
   imports: [
@@ -117,6 +118,7 @@ const appRoutes: Routes = [
     AlwaysAuthGuard, 
     UserService,
     OnlyLoggedInUsersGuard,
+    DataService,
   ],
   bootstrap: [AppComponent]
 })
